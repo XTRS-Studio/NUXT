@@ -1,5 +1,5 @@
 <template>
-  <section class="name">
+  <section class="name slide">
     <h1 class="name__title">
       The <span class="name__title--red">Veil</span> of
       <span class="name__title--big">Dread</span>
@@ -8,9 +8,6 @@
 </template>
 <style lang="scss" scoped>
 .name {
-  width: 100%;
-  height: 100%;
-
   display: grid;
   place-items: center;
 

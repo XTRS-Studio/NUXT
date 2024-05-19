@@ -1,5 +1,5 @@
 <template>
-  <section class="aboutGame">
+  <section class="aboutGame slide">
     <img class="aboutGame__img" loading="lazy" src="/Poster.JPEG" />
     <div class="aboutGame__text">
       <h1 class="aboutGame__title">О игре</h1>
@@ -19,9 +19,6 @@
 </template>
 <style lang="scss" scoped>
 .aboutGame {
-  width: 100%;
-  height: 100%;
-
   display: flex;
   gap: 35px;
   justify-content: center;
