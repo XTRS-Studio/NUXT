@@ -18,25 +18,23 @@
     <SwiperSlide> <SwiperAboutGame /></SwiperSlide>
     <SwiperSlide> <SwiperLocations /></SwiperSlide>
     <SwiperSlide> <SwiperTeam /></SwiperSlide>
+    <SwiperSlide> <SwiperTeam /></SwiperSlide>
     <SwiperSlide> <SwiperFAQ /></SwiperSlide>
     <SwiperSlide> <SwiperTeam /></SwiperSlide>
-    <SwiperSlide> <SwiperTeam /></SwiperSlide>
-    <SwiperSlide> <SwiperTeam /></SwiperSlide>
+    <SwiperSlide> <SwiperFooter /></SwiperSlide>
   </Swiper>
-  <div v-else>loading...</div>
 </template>
 <script setup>
-const loading = ref(true);
+import { useAppStore } from "@/store/index";
+const appStore = useAppStore();
 const currentSlide = ref(1);
-function handleSlideChange(swiper) {
+const loading = ref(true);
+const handleSlideChange = async (swiper) => {
   localStorage.setItem("currentSlide", swiper.realIndex);
-}
+  await appStore.setSlide(swiper.realIndex + 1);
+};
 onMounted(() => {
-  loading.value = false;
   currentSlide.value = localStorage.getItem("currentSlide");
+  loading.value = false;
 });
-// console.log(localStorage.getItem("currentSlide"));
-// function getInitialSlide() {
-//   return localStorage.getItem("currentSlide");
-// }
 </script>

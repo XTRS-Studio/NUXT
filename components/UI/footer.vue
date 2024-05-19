@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer__scroll">
+    <div v-if="appStore.getSlide < 9" class="footer__scroll">
       Скролль, чтобы увидеть больше <IconsAccArrow />
     </div>
     <div class="footer__tooltip">
@@ -12,7 +12,10 @@
     </div>
   </footer>
 </template>
-
+<script setup>
+import { useAppStore } from "@/store/index";
+const appStore = useAppStore();
+</script>
 <style lang="scss" scoped>
 .pollup {
   opacity: 0;

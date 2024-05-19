@@ -43,16 +43,15 @@ const peoples = [
     img: "/peoples/nikita.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Никитос",
+    description: "Туда сюда программист",
+    img: "/peoples/nikita2.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
+    name: "Анна, дизайнер по отраслям. работала над разработкой интерфейса и постера",
     description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+      "Меня зовут Анна, учусь на дизайнера, я разрабатывала персонажей для игры",
+    img: "/peoples/anna.jpg",
   },
   {
     name: "НИКИТА, АКА torro.ixq",

@@ -16,11 +16,13 @@ body {
   max-width: 1345px;
   width: 100%;
   height: 100dvh;
+  overflow: hidden;
   margin: 0 auto;
   padding: 50px 0 20px 0;
 }
 
 .main {
+  margin-top: 60px;
   height: calc(100% - 96px);
   display: grid;
 }
@@ -35,19 +37,28 @@ body {
   width: 100%;
 }
 .swiper-pagination {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
+  position: fixed !important;
+  display: flex !important;
+  flex-direction: column !important;
   right: unset !important;
   left: 50px !important;
 }
 .swiper-pagination-bullet {
   margin: 10px !important;
-  width: 15px;
-  height: 15px;
-  background: var(--white);
-  opacity: 25%;
+  width: 15px !important;
+  height: 15px !important;
+  background: var(--white) !important;
+  opacity: 25% !important;
   &-active {
-    opacity: unset;
+    opacity: unset !important;
   }
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
