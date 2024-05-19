@@ -1,8 +1,9 @@
 <template>
   <div class="wrapper">
     <UIHeader />
-    <main>
+    <main class="main">
       <NuxtPage> </NuxtPage>
     </main>
+    <UIFooter />
   </div>
 </template>
