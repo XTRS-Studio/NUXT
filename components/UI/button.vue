@@ -86,11 +86,25 @@ const classes = computed(() => ({
   padding: 20px 35px;
   border: 1px solid var(--white);
 
+  &:deep svg {
+    path {
+      fill: var(--white);
+
+      transition: var(--transition);
+    }
+  }
+
   &:hover {
     background: var(--white);
     color: var(--black);
 
     opacity: unset;
+
+    &:deep svg {
+      path {
+        fill: var(--black);
+      }
+    }
   }
 }
 
