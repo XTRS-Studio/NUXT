@@ -37,6 +37,8 @@ const classes = computed(() => ({
 .button {
   cursor: pointer;
 
+  width: fit-content;
+
   padding: 20px;
   border-radius: 15px;
   color: var(--white);
@@ -48,8 +50,12 @@ const classes = computed(() => ({
   align-items: center;
   justify-content: center;
   gap: 10px;
-  
+
   transition: var(--transition);
+
+  &:active {
+    transform: scale(0.93);
+  }
 
   &:hover {
     opacity: 0.7;
@@ -63,8 +69,12 @@ const classes = computed(() => ({
   background: var(--red);
   color: var(--white);
 
+  box-shadow: 0 0 25px rgb(255 0 0 / 58%);
+
   &:hover {
     background: var(--dark-red);
+
+    box-shadow: 0 0 25px rgb(0 0 0 / 58%);
 
     opacity: unset;
   }
