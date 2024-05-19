@@ -1,5 +1,8 @@
 <template>
   <footer class="footer">
+    <div class="footer__scroll">
+      Скролль, чтобы увидеть больше <IconsAccArrow />
+    </div>
     <div class="footer__tooltip">
       БЕТА-ВЕРСИЯ
       <IconsQuestion />
@@ -14,6 +17,28 @@
 .footer {
   display: flex;
   justify-content: flex-end;
+
+  &__scroll {
+    position: fixed;
+
+    bottom: 10px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--gray);
+
+    &:deep(svg) {
+      path {
+        stroke: var(--gray);
+      }
+    }
+  }
+
   &__tooltip {
     position: relative;
     display: flex;
