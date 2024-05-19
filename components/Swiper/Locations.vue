@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="locations slide">
-      <p class="locations__title">Локации</p>
+      <p class="slide__title">Локации</p>
       <div class="locations__items">
         <div class="locations__item">
           <IconsMicro />
@@ -17,7 +17,7 @@
             >Смотреть фото локации <i>{{ ">>>" }}</i></span
           >
         </div>
-        <NuxtImg class="locations__way" src="/arrows/top1.png" />
+        <img class="locations__way" src="/arrows/top1.png" />
         <div class="locations__item">
           <IconsAchieve />
           <div class="locations__item-info">
@@ -32,8 +32,8 @@
             >Смотреть фото локации <i>{{ ">>>" }}</i></span
           >
         </div>
-        <NuxtImg class="locations__way" src="/arrows/top2.png" />
-        <NuxtImg class="locations__way" src="/arrows/bottom1.png" />
+        <img class="locations__way" src="/arrows/top2.png" />
+        <img class="locations__way" src="/arrows/bottom1.png" />
         <div class="locations__item">
           <IconsLightning />
           <div class="locations__item-info">
@@ -47,7 +47,7 @@
             >Смотреть фото локации <i>{{ ">>>" }}</i></span
           >
         </div>
-        <NuxtImg class="locations__way" src="/arrows/bottom2.png" />
+        <img class="locations__way" src="/arrows/bottom2.png" />
         <div class="locations__item">
           <IconsBag />
           <div class="locations__item-info">
@@ -146,9 +146,6 @@ const openGallery = (name) => {
     place-content: center;
     width: 100%;
     height: 100%;
-  }
-  &__title {
-    font-size: 46px;
   }
   &__way {
     width: 80%;

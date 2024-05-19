@@ -2,7 +2,7 @@
   <section class="aboutGame slide">
     <img class="aboutGame__img" loading="lazy" src="/Poster.JPEG" />
     <div class="aboutGame__text">
-      <h1 class="aboutGame__title">О игре</h1>
+      <h1 class="slide__title">О игре</h1>
       <p class="aboutGame__description">
         Глубоко в заброшенной деревне Скорбово, окруженной мрачными лесами,
         развернется таинственное и напряженное приключение. В роли репортера
@@ -38,10 +38,6 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-
-  &__title {
-    font-size: 46px;
   }
 
   &__description {

@@ -1,0 +1,203 @@
+<template>
+  <section class="team slide">
+    <p class="slide__title">Наша команда</p>
+    <div class="team__content">
+      <div class="team__slider">
+        <div class="swiper-button-prev">
+          <UIButton class="team__button" typeStyle="transparent">
+            <IconsAccArrow
+          /></UIButton>
+        </div>
+        <Swiper
+          :navigation="{
+            nextEl: `.swiper-button-next`,
+            prevEl: `.swiper-button-prev`,
+          }"
+          @slideChange="updateCurrentPerson"
+          :modules="[SwiperNavigation]"
+          :slides-per-view="1"
+        >
+          <SwiperSlide v-for="(item, index) in peoples" :key="index">
+            <img class="team__image" :src="item.img" alt="" />
+          </SwiperSlide>
+        </Swiper>
+        <div class="swiper-button-next">
+          <UIButton class="team__button" typeStyle="transparent">
+            <IconsAccArrow
+          /></UIButton>
+        </div>
+      </div>
+      <div class="team__text">
+        <p class="team__name">{{ currentPerson.name }}</p>
+        <p class="team__description">{{ currentPerson.description }}</p>
+      </div>
+    </div>
+  </section>
+</template>
+<script setup>
+const peoples = [
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+  {
+    name: "НИКИТА, АКА torro.ixq",
+    description:
+      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
+    img: "/peoples/nikita.jpg",
+  },
+];
+const currentPerson = ref(peoples[0]);
+
+const updateCurrentPerson = (swiper) => {
+  const currentIndex = swiper.activeIndex;
+  currentPerson.value = peoples[currentIndex];
+};
+</script>
+<style lang="scss" scoped>
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 73px;
+  justify-content: center;
+  &__button {
+    padding: unset;
+  }
+  &__content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 77px;
+  }
+  &__image {
+    width: 100%;
+    height: 484px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  &__name {
+    font-size: 24px;
+  }
+  &__description {
+    font-size: 16px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 61%;
+    height: max-content;
+    padding: 22px 26px;
+    border-radius: 20px;
+    border: 3px solid var(--white);
+    position: relative;
+    &::before {
+      content: "";
+      border-radius: 20px;
+      background: var(--white);
+      opacity: 20%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slider {
+    display: flex;
+    width: 39%;
+    gap: 41px;
+    align-items: center;
+    .swiper {
+      width: 100%;
+    }
+    .swiper-button-next {
+      rotate: 270deg;
+    }
+    .swiper-button-prev {
+      rotate: 90deg;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: unset;
+      margin-top: unset;
+      svg {
+        min-width: 50px;
+      }
+      &::after,
+      &::before {
+        content: unset;
+      }
+    }
+  }
+}
+</style>

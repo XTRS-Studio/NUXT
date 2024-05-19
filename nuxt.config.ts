@@ -2,4 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/image", "nuxt-swiper"],
+  imports: {
+    dirs: ["composables", "composables/**"],
+  },
 });
