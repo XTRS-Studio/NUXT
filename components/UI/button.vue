@@ -31,6 +31,7 @@ const classes = computed(() => ({
   button: true,
   transparent: props.typeStyle.includes("transparent"),
   red: props.typeStyle.includes("red"),
+  error: props.typeStyle.includes("error"),
 }));
 </script>
 <style lang="scss" scoped>
@@ -87,6 +88,24 @@ const classes = computed(() => ({
   &:hover {
     background: var(--white);
     color: var(--black);
+
+    opacity: unset;
+  }
+}
+
+.error {
+  @extend .button;
+
+  padding: 20px 35px;
+  background: var(--light-red);
+  color: var(--white);
+
+  box-shadow: 0 0 25px rgb(255 0 0 / 58%);
+
+  &:hover {
+    background: var(--dark-red);
+
+    box-shadow: 0 0 25px rgb(0 0 0 / 58%);
 
     opacity: unset;
   }
