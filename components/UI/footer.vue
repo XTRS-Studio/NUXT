@@ -1,10 +1,6 @@
 <template>
   <footer class="footer">
-    <div
-      aria-label="ВО ВРЕМЯ ОТКРЫТОГО БЕТА-ТЕСТИРОВАНИЯ БУДЕТ ДОСТУПНА ЧАТЬ ФУНКЦИЙ"
-      data-balloon-pos="up"
-      class="footer__tooltip"
-    >
+    <div class="footer__tooltip">
       БЕТА-ВЕРСИЯ
       <IconsQuestion />
     </div>

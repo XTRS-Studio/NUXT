@@ -1,3 +1,3 @@
 <template>
-  <SwiperAboutGame />
+  <SwiperLocations />
 </template>

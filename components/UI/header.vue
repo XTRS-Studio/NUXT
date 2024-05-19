@@ -10,8 +10,8 @@
       <UIButton>FAQ</UIButton>
     </ul>
     <div class="header__buttons">
-      <UIButton>Войти</UIButton>
-      <UIButton typeStyle="red">Регистрация</UIButton>
+      <UIButton disabled>Войти</UIButton>
+      <UIButton disabled typeStyle="red">Регистрация</UIButton>
     </div>
   </header>
 </template>
