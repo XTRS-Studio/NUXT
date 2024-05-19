@@ -101,8 +101,8 @@ const classes = computed(() => ({
     opacity: unset;
 
     &:deep svg {
-      stroke {
-        fill: var(--black);
+      path {
+        stroke: var(--black);
       }
     }
   }
