@@ -2,12 +2,10 @@
   <div class="accordion" :class="{ disabled: disabled }" @click="handleToggle">
     <div class="accordion__header">
       {{ header }}
-
-      <IconsAccArrow :class="{ isOpen: active }" />
+      <IconsAccArrow v-if="!disabled" :class="{ isOpen: active }" />
+      <IconsCancel v-else />
     </div>
-    <Transition>
-      <div class="accordion__content" v-show="active"><slot></slot></div>
-    </Transition>
+    <div class="accordion__content" v-show="active"><slot></slot></div>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -23,6 +21,8 @@
 }
 
 .accordion {
+  cursor: pointer;
+
   width: 100%;
 
   padding: 20px 25px;

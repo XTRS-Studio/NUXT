@@ -16,3 +16,24 @@
     </div>
   </section>
 </template>
+<style lang="scss" scoped>
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__title {
+    font-size: 46px;
+  }
+
+  &__accordions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+</style>
