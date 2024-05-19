@@ -37,7 +37,7 @@ const classes = computed(() => ({
 
   position: absolute;
 
-  top: 100%;
+  top: 120%;
   left: 50%;
 
   transform: translate(-50%, -10%);
@@ -114,6 +114,7 @@ const classes = computed(() => ({
     &:hover {
       .pollup {
         opacity: 1;
+        top: 100%;
       }
     }
   }

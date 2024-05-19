@@ -175,10 +175,11 @@ const updateCurrentPerson = (swiper) => {
   &__slider {
     display: flex;
     width: 39%;
-    gap: 41px;
+    gap: 30px;
     align-items: center;
     .swiper {
       width: 100%;
+      border-radius: 25px;
     }
     .swiper-button-next {
       rotate: 270deg;
@@ -190,6 +191,9 @@ const updateCurrentPerson = (swiper) => {
     .swiper-button-prev {
       position: unset;
       margin-top: unset;
+
+      width: fit-content;
+      height: fit-content;
       svg {
         min-width: 50px;
       }

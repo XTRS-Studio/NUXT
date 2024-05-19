@@ -4,6 +4,14 @@ html {
   background-position: center;
 }
 
+body {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.831) 0%,
+    rgba(255, 255, 255, 0) 30%
+  );
+}
+
 .wrapper {
   max-width: 1345px;
   width: 100%;

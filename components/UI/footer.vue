@@ -14,53 +14,12 @@
 </template>
 
 <style lang="scss" scoped>
-.footer {
-  display: flex;
-  justify-content: flex-end;
-
-  &__scroll {
-    position: fixed;
-
-    bottom: 10px;
-    right: 50%;
-
-    transform: translateX(50%);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    color: var(--gray);
-
-    &:deep(svg) {
-      path {
-        stroke: var(--gray);
-      }
-    }
-  }
-
-  &__tooltip {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: help;
-    gap: 10px;
-    color: var(--gray);
-
-    &:hover {
-      .pollup {
-        opacity: 1;
-      }
-    }
-  }
-}
-
 .pollup {
   opacity: 0;
 
   position: absolute;
 
-  top: 100%;
+  top: 120%;
   left: 50%;
 
   transform: translate(-50%, -10%);
@@ -95,6 +54,50 @@
     transform: translateX(-50%);
 
     background: url("/Polygon.svg") no-repeat center;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  &__scroll {
+    position: fixed;
+
+    z-index: 99999;
+
+    bottom: 30px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--gray);
+
+    &:deep(svg) {
+      path {
+        stroke: var(--gray);
+      }
+    }
+  }
+
+  &__tooltip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: help;
+    gap: 10px;
+    color: var(--gray);
+
+    &:hover {
+      .pollup {
+        opacity: 1;
+        top: 100%;
+      }
+    }
   }
 }
 </style>
