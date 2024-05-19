@@ -1,3 +1,3 @@
 <template>
-  <SwiperLocations />
+  <SwiperFAQ />
 </template>

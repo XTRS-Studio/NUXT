@@ -20,6 +20,7 @@
 <style lang="scss" scoped>
 .aboutGame {
   display: flex;
+  display: flex;
   gap: 35px;
   justify-content: center;
   align-items: center;
