@@ -1,8 +1,11 @@
 <template>
   <footer class="footer">
-    <div v-if="appStore.getSlide < 9" class="footer__scroll">
-      Скролль, чтобы увидеть больше <IconsAccArrow />
-    </div>
+    <Transition>
+      <div v-show="appStore.getSlide < 9" class="footer__scroll">
+        Скролль, чтобы увидеть больше <IconsAccArrow />
+      </div>
+    </Transition>
+
     <div class="footer__tooltip">
       БЕТА-ВЕРСИЯ
       <IconsQuestion />
