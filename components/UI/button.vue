@@ -48,6 +48,12 @@ const classes = computed(() => ({
   align-items: center;
   justify-content: center;
   gap: 10px;
+  
+  transition: var(--transition);
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .red {
@@ -56,10 +62,23 @@ const classes = computed(() => ({
   padding: 20px 35px;
   background: var(--red);
   color: var(--white);
+
+  &:hover {
+    background: var(--dark-red);
+
+    opacity: unset;
+  }
 }
 
 .transparent {
   padding: 20px 35px;
   border: 1px solid var(--white);
+
+  &:hover {
+    background: var(--white);
+    color: var(--black);
+
+    opacity: unset;
+  }
 }
 </style>

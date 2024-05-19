@@ -141,3 +141,4 @@ yarn.lock
 .idea/codeStyles/Project.xml
 .idea/workspace.xml
 bun.lockb
+.DS_Store
