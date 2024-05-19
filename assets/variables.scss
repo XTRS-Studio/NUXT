@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Edo SZ HQ";
+  src: url("@/assets/fonts/edoszhq_regular.ttf");
+}
+
+$x-small: 575.98px;
+$small: 767.98px;
+$medium: 991.98px;
+$large: 1199.98px;
+$x-large: 1399.98px;
+$big: 1592.98px;
+$x-big: 1829.98px;
+
+:root {
+  --white: #fff;
+  --red: #b10612;
+  --dark-red: #2f0001;
+  --light-red: #ec4656;
+  --gray: #969290;
+}
