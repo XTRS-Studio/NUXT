@@ -1,10 +1,5 @@
 <template>
-  <button
-    :class="classes"
-    :disabled="props.disabled"
-    :type="props.type"
-    @click="props.onClick"
-  >
+  <button :class="classes" :disabled="disabled" :type="type" @click="onClick">
     <slot></slot>
   </button>
 </template>
@@ -60,6 +55,12 @@ const classes = computed(() => ({
 
   &:hover {
     opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+
+    pointer-events: none;
   }
 }
 
