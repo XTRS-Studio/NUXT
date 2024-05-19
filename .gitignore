@@ -1,3 +1,5 @@
+.yarn.lock
+
 .output
 /store/config.js
 
