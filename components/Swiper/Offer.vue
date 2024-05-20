@@ -23,36 +23,57 @@
   </section>
 </template>
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 .offer {
   display: flex;
   flex-direction: column;
   gap: 25px;
   justify-content: center;
   align-items: flex-start;
+  @media screen and (max-width: $medium) {
+    margin-left: 100px;
+  }
+  @media screen and (max-width: $small) {
+    margin-left: 17px;
+  }
 
   &__titles {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @media screen and (max-width: $medium) {
+      gap: 15px;
+    }
   }
 
   &__small-title {
     font-size: 18px;
     color: var(--gray);
+    @media screen and (max-width: $x-small) {
+      font-size: 14px;
+    }
   }
 
   &__title {
     width: 50%;
 
     font-size: 68px;
+    @media screen and (max-width: $medium) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: $x-small) {
+      font-size: 24px;
+    }
   }
 
   &__lists {
     display: flex;
-    flex-direction: row;
     gap: 25px;
-
     margin: 0 0px 0 20px;
+    @media screen and (max-width: $medium) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__list {
@@ -72,10 +93,12 @@
 
   &__buttons {
     display: flex;
-    flex-direction: row;
     gap: 15px;
-
     margin: 15px 0 0 0;
+    @media screen and (max-width: $x-small) {
+      flex-direction: column;
+      margin: unset;
+    }
   }
 }
 </style>

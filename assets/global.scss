@@ -19,7 +19,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   padding: 50px 40px 20px 40px;
-  @media screen and (max-width: $x-small) {
+  @media screen and (max-width: $small) {
     padding: 50px 20px 20px 20px;
   }
   &--dark {
@@ -58,6 +58,9 @@ body {
   flex-direction: column !important;
   right: unset !important;
   left: 50px !important;
+  @media screen and (max-width: $medium) {
+    display: none !important;
+  }
 }
 .swiper-pagination-bullet {
   margin: 10px !important;
