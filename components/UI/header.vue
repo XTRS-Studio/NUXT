@@ -15,8 +15,8 @@
           <UIButton disabled>Войти</UIButton>
           <UIButton disabled typeStyle="red">Регистрация</UIButton>
         </div>
-        <UIButton @click="openMenu">
-          <IconsBurger class="header__burger"
+        <UIButton class="header__burger" @click="openMenu">
+          <IconsBurger
         /></UIButton>
       </header>
     </Transition>
