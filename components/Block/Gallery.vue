@@ -54,9 +54,8 @@ const closeGallery = async () => {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
   width: 100%;
   height: 100%;
   z-index: 10;

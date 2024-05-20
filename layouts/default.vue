@@ -1,10 +1,16 @@
 <template>
-  <div v-if="!loading" class="wrapper">
+  <div
+    v-if="!loading"
+    :class="appStore.getGallery ? 'wrapper--dark' : null"
+    class="wrapper"
+  >
     <UIHeader />
     <main class="main">
       <NuxtPage />
     </main>
-    <BlockGallery v-if="appStore.getGallery" :name="appStore.getGallery" />
+    <Transition name="scale">
+      <BlockGallery v-if="appStore.getGallery" :name="appStore.getGallery" />
+    </Transition>
     <UIFooter />
   </div>
   <div v-else class="wrapper">

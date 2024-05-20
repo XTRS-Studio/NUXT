@@ -68,7 +68,7 @@ const appStore = useAppStore();
   &__scroll {
     position: fixed;
 
-    z-index: 99999;
+    z-index: 1;
 
     bottom: 30px;
     right: 50%;
