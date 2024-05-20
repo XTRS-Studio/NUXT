@@ -9,7 +9,12 @@
         :centeredSlides="true"
         :grabCursor="true"
         @slideChange="updateCurrentHero"
+        :modules="[SwiperAutoplay]"
         :slides-per-view="1.7"
+        :autoplay="{
+          delay: 2000,
+          disableOnInteraction: true,
+        }"
       >
         <SwiperSlide v-for="(item, index) in heroes" :key="index">
           <img class="heroes__img" :src="item.img" alt="" />
