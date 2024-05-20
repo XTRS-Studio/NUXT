@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <Transition>
-      <div v-show="appStore.getSlide < 9" class="footer__scroll">
+      <div v-show="appStore.getSlide < 9 && !error" class="footer__scroll">
         Скролль, чтобы увидеть больше <IconsAccArrow />
       </div>
     </Transition>
@@ -18,6 +18,11 @@
 <script setup>
 import { useAppStore } from "@/store/index";
 const appStore = useAppStore();
+const { error } = defineProps({
+  error: {
+    type: Boolean,
+  },
+});
 </script>
 <style lang="scss" scoped>
 .pollup {
