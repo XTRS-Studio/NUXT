@@ -25,14 +25,12 @@ const appStore = useAppStore();
 
   position: absolute;
 
-  top: 120%;
-  left: 50%;
+  top: -180%;
+  left: 0%;
 
-  transform: translate(-50%, -10%);
+  transform: translate(-45%, -10%);
 
-  width: fit-content;
-
-  white-space: nowrap;
+  width: 200px;
 
   padding: 5px 15px;
 
@@ -54,10 +52,10 @@ const appStore = useAppStore();
     width: 20px;
     height: 20px;
 
-    top: -10px;
+    top: 44px;
     left: 50%;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(180deg);
 
     background: url("/Polygon.svg") no-repeat center;
   }
@@ -101,7 +99,7 @@ const appStore = useAppStore();
     &:hover {
       .pollup {
         opacity: 1;
-        top: 100%;
+        top: -200%;
       }
     }
   }

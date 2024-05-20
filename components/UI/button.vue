@@ -1,15 +1,14 @@
 <template>
   <button :class="classes" :disabled="disabled" :type="type" @click="onClick">
     <slot></slot>
-
     <div v-if="disabled" class="pollup">Не работает</div>
   </button>
 </template>
 <script setup>
 const props = defineProps({
   typeStyle: {
-    type: Array,
-    default: () => [],
+    type: String,
+    default: "default",
   },
   disabled: {
     type: Boolean,
@@ -26,9 +25,9 @@ const props = defineProps({
 
 const classes = computed(() => ({
   button: true,
-  transparent: props.typeStyle.includes("transparent"),
-  red: props.typeStyle.includes("red"),
-  error: props.typeStyle.includes("error"),
+  transparent: props.typeStyle === "transparent",
+  red: props.typeStyle === "red",
+  error: props.typeStyle === "error",
 }));
 </script>
 <style lang="scss" scoped>
