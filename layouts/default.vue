@@ -2,7 +2,7 @@
   <div v-if="!loading" class="wrapper">
     <UIHeader />
     <main class="main">
-      <NuxtPage> </NuxtPage>
+      <NuxtPage />
     </main>
     <UIFooter />
   </div>

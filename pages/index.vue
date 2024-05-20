@@ -37,4 +37,15 @@ onMounted(() => {
   currentSlide.value = localStorage.getItem("currentSlide");
   loading.value = false;
 });
+
+useSeoMeta({
+  title: "The Veil of Dread",
+  meta: [
+    {
+      hid: "Horror game",
+      name: "Horror game",
+      content: "The Veil of Dread",
+    },
+  ],
+});
 </script>

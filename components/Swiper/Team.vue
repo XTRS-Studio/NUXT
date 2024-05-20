@@ -16,6 +16,7 @@
           @slideChange="updateCurrentPerson"
           :modules="[SwiperNavigation]"
           :slides-per-view="1"
+          :space-between="20"
         >
           <SwiperSlide v-for="(item, index) in peoples" :key="index">
             <img class="team__image" :src="item.img" alt="" />
@@ -48,70 +49,63 @@ const peoples = [
     img: "/peoples/nikita2.jpg",
   },
   {
-    name: "Анна, дизайнер по отраслям. работала над разработкой интерфейса и постера",
+    name: "Анна",
     description:
-      "Меня зовут Анна, учусь на дизайнера, я разрабатывала персонажей для игры",
+      "Дизайнер по отраслям. работала над разработкой интерфейса и постера.",
     img: "/peoples/anna.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
+    name: "Микрюкова Виктория",
     description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+      "Место учебы: Мвек (графический дизайнер) / Возраст:20 / Что делала? Я создавала макет игры ( загрузка + несколько пунктов), а также помогала в создании персонажей и созданием постера. Придумывала идеи связанные с игровым процессом и создавала (характеристику в таблице).",
+    img: "/peoples/viktoria.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
+    name: "Калашникова Дарья",
     description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+      "16 лет, живу в Ижевске, студентка МВЕК по специальности графический дизайнер / Хобби - играть на укулеле  / Любимый цвет - серый / Знак зодиака - стрелец / Помогала разрабатывать постеры и макеты.",
+    img: "/peoples/darya.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Максим",
+    description: "Нет данных",
+    img: "/noData.png",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Аня",
+    description: "Учусь на дизайнера, я разрабатывала персонажей для игры.",
+    img: "/peoples/anna2.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Алексей",
+    description: "Нет данных",
+    img: "/peoples/aleksey.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
+    name: "Державин Михаил",
     description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+      "Наставник команды XTRC-Studio+. Без него не было бы команды. Набор и помощь были с его стороны, и мы все благодарны ему.",
+    img: "/noData.png",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Дарья",
+    description: "Нет данных",
+    img: "/noData.png",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Ксения",
+    description: "Нет данных",
+    img: "/peoples/kseniya.jpg",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Нет данных",
+    description: "Нет данных",
+    img: "/noData.png",
   },
   {
-    name: "НИКИТА, АКА torro.ixq",
-    description:
-      "17 лет, веб-дизайнер и разработчик веб-приложений и игр. Основатель компаний, таких как aepstore, nekomi и xtrc-studio+.",
-    img: "/peoples/nikita.jpg",
+    name: "Дарья",
+    description: "Нет данных",
+    img: "/noData.png",
   },
 ];
 const currentPerson = ref(peoples[0]);
