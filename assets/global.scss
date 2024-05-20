@@ -47,6 +47,9 @@ body {
   height: 100%;
   &__title {
     font-size: 46px;
+    @media screen and (max-width: $x-small) {
+      font-size: 24px;
+    }
   }
 }
 .swiper {

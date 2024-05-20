@@ -74,30 +74,51 @@ const openGallery = async (name) => {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 .locations {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 50px;
   width: 100%;
+  @media screen and (max-width: $x-small) {
+    gap: 15px;
+  }
 
   &__way {
     width: 80%;
     height: 100%;
     object-fit: contain;
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 100%;
+    @media screen and (max-width: $x-small) {
+      gap: unset;
+      svg {
+        scale: 0.8;
+      }
+    }
     &-info {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
+    &-description {
+      @media screen and (max-width: $x-small) {
+        font-size: 14px;
+      }
+    }
     &-name {
       font-size: 24px;
+      @media screen and (max-width: $x-small) {
+        font-size: 14px;
+      }
     }
     &-show {
       font-size: 14px;
@@ -116,6 +137,17 @@ const openGallery = async (name) => {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
+    @media screen and (max-width: $medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    @media screen and (max-width: $small) {
+      gap: 25px;
+    }
+    @media screen and (max-width: $x-small) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
   }
 }
 </style>
