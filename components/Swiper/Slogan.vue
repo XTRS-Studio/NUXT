@@ -9,11 +9,30 @@
   </section>
 </template>
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 .slogan {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__text {
     font-size: 70px;
+    @media screen and (max-width: $x-large) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: $large) {
+      font-size: 55px;
+    }
+    @media screen and (max-width: $medium) {
+      font-size: 45px;
+    }
+    @media screen and (max-width: $small) {
+      font-size: 30px;
+      max-width: 70%;
+    }
+    @media screen and (max-width: $x-small) {
+      font-size: 30px;
+      max-width: 80%;
+    }
   }
 }
 </style>

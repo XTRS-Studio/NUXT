@@ -61,6 +61,9 @@ body {
   @media screen and (max-width: $medium) {
     display: none !important;
   }
+  @media screen and (max-width: 1557px) {
+    left: 0px !important;
+  }
 }
 .swiper-pagination-bullet {
   margin: 10px !important;
