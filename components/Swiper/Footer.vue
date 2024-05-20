@@ -5,12 +5,12 @@
       <div class="slide__footer-section">
         <p class="slide__footer-section-title">Навигация</p>
         <div class="slide__footer-top-links">
-          <UIButton>Главная</UIButton>
-          <UIButton>О Игре</UIButton>
-          <UIButton>Локации</UIButton>
-          <UIButton>Персонажи</UIButton>
-          <UIButton>О Команде</UIButton>
-          <UIButton>FAQ</UIButton>
+          <UIButton @click="goToSlide(0)">Главная</UIButton>
+          <UIButton @click="goToSlide(2)">О игре</UIButton>
+          <UIButton @click="goToSlide(7)">Возможности</UIButton>
+          <UIButton @click="goToSlide(3)">Локации</UIButton>
+          <UIButton @click="goToSlide(5)">О команде</UIButton>
+          <UIButton @click="goToSlide(6)">FAQ</UIButton>
         </div>
       </div>
       <div class="slide__footer-section">
@@ -42,6 +42,15 @@
     </div>
   </section>
 </template>
+<script setup>
+import { useAppStore } from "@/store/index";
+const appStore = useAppStore();
+const goToSlide = (index) => {
+  if (appStore.getSwiper) {
+    appStore.getSwiper.slideTo(index);
+  }
+};
+</script>
 <style lang="scss" scoped>
 .slide {
   &__footer {
