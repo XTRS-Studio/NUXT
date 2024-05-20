@@ -3,12 +3,12 @@
     <header v-show="appStore.getSlide !== 9" class="header">
       <NuxtImg class="header__logo" src="/Logotype.svg" />
       <ul class="header__nav">
-        <UIButton>Главная</UIButton>
-        <UIButton>О игре</UIButton>
-        <UIButton>Возможности</UIButton>
-        <UIButton>Локации</UIButton>
-        <UIButton>О команде</UIButton>
-        <UIButton>FAQ</UIButton>
+        <UIButton @click="goToSlide(0)">Главная</UIButton>
+        <UIButton @click="goToSlide(2)">О игре</UIButton>
+        <UIButton @click="goToSlide(7)">Возможности</UIButton>
+        <UIButton @click="goToSlide(3)">Локации</UIButton>
+        <UIButton @click="goToSlide(5)">О команде</UIButton>
+        <UIButton @click="goToSlide(6)">FAQ</UIButton>
       </ul>
       <div class="header__buttons">
         <UIButton disabled>Войти</UIButton>
@@ -20,6 +20,11 @@
 <script setup>
 import { useAppStore } from "@/store/index";
 const appStore = useAppStore();
+const goToSlide = (index) => {
+  if (appStore.getSwiper) {
+    appStore.getSwiper.slideTo(index);
+  }
+};
 </script>
 
 <style lang="scss" scoped>
