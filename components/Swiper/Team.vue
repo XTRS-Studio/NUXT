@@ -120,12 +120,19 @@ const updateCurrentPerson = (swiper) => {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 .team {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 73px;
   justify-content: center;
+  @media screen and (max-width: $medium) {
+    align-items: flex-start;
+  }
+  @media screen and (max-width: $small) {
+    align-items: center;
+  }
   &__button {
     padding: unset;
   }
@@ -134,12 +141,27 @@ const updateCurrentPerson = (swiper) => {
     width: 100%;
     align-items: center;
     gap: 77px;
+    @media screen and (max-width: $large) {
+      gap: 25px;
+    }
+    @media screen and (max-width: $medium) {
+      gap: 50px;
+    }
+    @media screen and (max-width: $small) {
+      flex-direction: column;
+    }
   }
   &__image {
     width: 100%;
     height: 484px;
     object-fit: cover;
     border-radius: 25px;
+    @media screen and (max-width: $medium) {
+      height: 290px;
+    }
+    @media screen and (max-width: $small) {
+      height: 218px;
+    }
   }
   &__name {
     font-size: 24px;
@@ -151,7 +173,7 @@ const updateCurrentPerson = (swiper) => {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 61%;
+    width: 100%;
     height: max-content;
     padding: 22px 26px;
     border-radius: 20px;
@@ -171,9 +193,17 @@ const updateCurrentPerson = (swiper) => {
   }
   &__slider {
     display: flex;
-    width: 39%;
+    max-width: 547px;
     gap: 30px;
     align-items: center;
+    @media screen and (max-width: $medium) {
+      max-width: 393px;
+      gap: 27px;
+    }
+    @media screen and (max-width: $small) {
+      max-width: 330px;
+      gap: 15px;
+    }
     .swiper {
       width: 100%;
       border-radius: 25px;
@@ -193,6 +223,10 @@ const updateCurrentPerson = (swiper) => {
       height: fit-content;
       svg {
         min-width: 50px;
+        @media screen and (max-width: $small) {
+          min-width: unset;
+          width: 40px;
+        }
       }
       &::after,
       &::before {

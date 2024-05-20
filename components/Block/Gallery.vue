@@ -50,6 +50,7 @@ const closeGallery = async () => {
 };
 </script>
 <style lang="scss" scoped>
+@import "@/assets/variables.scss";
 .modal {
   position: fixed;
   top: 0;
@@ -61,13 +62,25 @@ const closeGallery = async () => {
   z-index: 10;
   &__slider {
     display: grid;
-    max-width: 1194px;
+    max-width: 1214px;
     width: 100%;
     position: relative;
     height: 596px;
+    padding: 0 20px;
+    @media screen and (max-width: $medium) {
+      height: 500px;
+    }
+    @media screen and (max-width: $small) {
+      height: 400px;
+    }
+    @media screen and (max-width: $x-small) {
+      height: 300px;
+    }
     img {
       width: 100%;
       height: 100%;
+      z-index: 2;
+      position: relative;
       object-fit: cover;
       border-radius: 25px;
       border: 2px solid var(--white);
