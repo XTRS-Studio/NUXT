@@ -13,8 +13,12 @@
             nextEl: `.swiper-button-next`,
             prevEl: `.swiper-button-prev`,
           }"
+          :autoplay="{
+            delay: 2000,
+            disableOnInteraction: true,
+          }"
           @slideChange="updateCurrentPerson"
-          :modules="[SwiperNavigation]"
+          :modules="[SwiperNavigation, SwiperAutoplay]"
           :slides-per-view="1"
           :space-between="20"
         >
@@ -69,7 +73,7 @@ const peoples = [
   {
     name: "Максим",
     description: "Нет данных",
-    img: "/noData.png",
+    img: "/NoData.png",
   },
   {
     name: "Аня",
@@ -85,12 +89,12 @@ const peoples = [
     name: "Державин Михаил",
     description:
       "Наставник команды XTRC-Studio+. Без него не было бы команды. Набор и помощь были с его стороны, и мы все благодарны ему.",
-    img: "/noData.png",
+    img: "/NoData.png",
   },
   {
     name: "Дарья",
     description: "Нет данных",
-    img: "/noData.png",
+    img: "/NoData.png",
   },
   {
     name: "Ксения",
@@ -100,12 +104,12 @@ const peoples = [
   {
     name: "Нет данных",
     description: "Нет данных",
-    img: "/noData.png",
+    img: "/NoData.png",
   },
   {
     name: "Дарья",
     description: "Нет данных",
-    img: "/noData.png",
+    img: "/NoData.png",
   },
 ];
 const currentPerson = ref(peoples[0]);

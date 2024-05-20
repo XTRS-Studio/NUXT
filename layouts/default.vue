@@ -4,6 +4,7 @@
     <main class="main">
       <NuxtPage />
     </main>
+    <BlockGallery v-if="appStore.getGallery" :name="appStore.getGallery" />
     <UIFooter />
   </div>
   <div v-else class="wrapper">
@@ -13,6 +14,10 @@
   </div>
 </template>
 <script setup>
+import { useAppStore } from "@/store/index";
+
+const appStore = useAppStore();
+
 const loading = ref(true);
 onMounted(() => {
   loading.value = false;

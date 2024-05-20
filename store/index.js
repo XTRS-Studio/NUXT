@@ -6,6 +6,7 @@ export const useAppStore = defineStore({
     return {
       currentSlide: 1,
       swiperInstance: null,
+      gallery: null,
     };
   },
   actions: {
@@ -15,9 +16,16 @@ export const useAppStore = defineStore({
     async setSwiper(value) {
       this.swiperInstance = value;
     },
+    async setGallery(value) {
+      this.gallery = value;
+    },
+    async closeGallery() {
+      this.gallery = null;
+    },
   },
   getters: {
     getSlide: (state) => state.currentSlide,
     getSwiper: (state) => state.swiperInstance,
+    getGallery: (state) => state.gallery,
   },
 });

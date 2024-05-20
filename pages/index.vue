@@ -18,7 +18,7 @@
     <SwiperSlide> <SwiperSlogan /></SwiperSlide>
     <SwiperSlide> <SwiperAboutGame /></SwiperSlide>
     <SwiperSlide> <SwiperLocations /></SwiperSlide>
-    <SwiperSlide> <SwiperTeam /></SwiperSlide>
+    <SwiperSlide> <SwiperHeroes /></SwiperSlide>
     <SwiperSlide> <SwiperTeam /></SwiperSlide>
     <SwiperSlide> <SwiperFAQ /></SwiperSlide>
     <SwiperSlide> <SwiperOffer /></SwiperSlide>
@@ -26,7 +26,6 @@
   </Swiper>
 </template>
 <script setup>
-import { ref, onMounted, watch } from "vue";
 import { useAppStore } from "@/store/index";
 
 const appStore = useAppStore();
@@ -45,7 +44,6 @@ const handleSlideChange = async (swiper) => {
 
 async function onSwiper(swiper) {
   await appStore.setSwiper(swiper);
-  console.log(appStore.getSwiper);
 }
 
 useSeoMeta({

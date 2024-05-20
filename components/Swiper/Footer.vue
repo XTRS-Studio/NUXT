@@ -14,11 +14,10 @@
         </div>
       </div>
       <div class="slide__footer-section">
-        <p class="slide__footer-section-title">Разное</p>
+        <p class="slide__footer-section-title">ЕЩЁ</p>
         <div class="slide__footer-top-links">
-          <UIButton>Поддержать проект</UIButton>
-          <UIButton>Благодарности</UIButton>
-          <UIButton>Контакты</UIButton>
+          <UIButton @click="goToSlide(1)">СЛОГАН</UIButton>
+          <UIButton @click="goToSlide(4)">ПЕРСОНАЖИ</UIButton>
         </div>
       </div>
       <div class="slide__footer-section">
