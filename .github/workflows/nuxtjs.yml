@@ -70,6 +70,8 @@ jobs:
             ${{ runner.os }}-nuxt-build-
       - name: Install oxc-parser
         run: npm install -D oxc-parser
+      - name: Install @rollup/rollup-linux-x64-gnu
+        run: npm install @rollup/rollup-linux-x64-gnu
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Static HTML export with Nuxt
