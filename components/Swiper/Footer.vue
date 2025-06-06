@@ -43,6 +43,7 @@
 </template>
 <script setup>
 import { useAppStore } from "@/store/index";
+import { NuxtImg } from "@nuxt/image";
 const appStore = useAppStore();
 const goToSlide = (index) => {
   if (appStore.getSwiper) {
